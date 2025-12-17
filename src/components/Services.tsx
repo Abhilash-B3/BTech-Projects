@@ -11,7 +11,7 @@ const services: Service[] = [
       'Source Code',
       'Project Explanation',
       'Database Schema',
-      'Viva Support',
+      'User Interactive Design',
       'Setup Guide'
     ],
     icon: GraduationCap,
