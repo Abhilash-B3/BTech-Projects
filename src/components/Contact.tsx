@@ -90,7 +90,7 @@ const Contact: React.FC = () => {
             </div>
 
             <div className="mt-10 p-4 bg-indigo-50 rounded-lg">
-              <h4 className="font-semibold text-indigo-900 mb-2">Office Hours</h4>
+              <h4 className="font-semibold text-indigo-900 mb-2">Working Hours</h4>
               <p className="text-sm text-indigo-800">Monday - Saturday: 9:00 AM - 9:00 PM</p>
               <p className="text-sm text-indigo-800">Sunday: 10:00 AM - 5:00 PM</p>
             </div>
