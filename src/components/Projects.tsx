@@ -1,99 +1,155 @@
 import React from 'react';
-import { Project } from '../types';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
+// --------------------
+// Types
+// --------------------
+export type Project = {
+  title: string;
+  description: string;
+  link: string;
+  image: string;
+  tags: string[];
+};
+
+// --------------------
+// Data
+// --------------------
 const projects: Project[] = [
   {
     title: 'EduTech',
     description: 'A comprehensive learning management system for schools.',
     link: 'https://academix-zeta-ten.vercel.app/',
     image: 'https://www.aiu.edu/wp-content/uploads/2025/02/education-technology-trends-scaled-1.jpg',
-    tags: ['React', 'Node.js', 'MongoDB']
+    tags: ['React.js', 'Java(SpringBoot)', 'MongoDB'],
   },
   {
     title: 'CareerFluence',
     description: 'Job readiness and career tracking platform for graduates.',
     link: 'https://careerfluence.vercel.app/',
     image: 'https://mantechpublications.com/wp-content/uploads/2024/11/1-7-1024x1024.jpg',
-    tags: ['Next.js', 'Tailwind', 'Firebase']
+    tags: ['HTML', 'CSS','React.js', 'Python'],
   },
   {
     title: 'GarageNow',
     description: 'On-demand mechanic and vehicle service booking app.',
     link: 'https://garage-now.vercel.app/',
     image: 'https://images.unsplash.com/photo-1727893119356-1702fe921cf9?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FyJTIwc2VydmljZXxlbnwwfHwwfHx8MA%3D%3D',
-    tags: ['MERN Stack', 'Redux', 'Stripe']
-  }
+    tags: ['MERN Stack', 'Redux', 'Stripe'],
+  },
 ];
 
+const interviewPrep: Project[] = [
+  {
+    title: 'Interview Preparation',
+    description: 'Top 100 DSA coding logics practicing links, open the link and practice the problems for cracking interviews in top MNCs',
+    link: 'https://dsa-100-logics.vercel.app/',
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?fm=jpg&q=60&w=3000',
+    tags: ['DSA', 'Java', 'Python', 'Interview Prep'],
+  },
+];
+
+// --------------------
+// Reusable Card
+// --------------------
+const ShowcaseCard: React.FC<{ item: Project }> = ({ item }) => {
+  return (
+    <div className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+      <div className="relative h-48 overflow-hidden">
+        <img
+          src={item.image}
+          alt={item.title}
+          className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+          <a
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-4 py-2 bg-white rounded-full text-slate-900 font-medium text-sm hover:bg-slate-100"
+          >
+            View Live <ExternalLink size={14} className="ml-2" />
+          </a>
+        </div>
+      </div>
+
+      <div className="p-6">
+        <div className="flex flex-wrap gap-2 mb-3">
+          {item.tags.map((tag, i) => (
+            <span
+              key={i}
+              className="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs font-semibold rounded"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+        <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">
+          {item.title}
+        </h3>
+        <p className="text-slate-600 text-sm mb-4 line-clamp-2">
+          {item.description}
+        </p>
+        <div className="pt-4 border-t border-slate-100 flex justify-between items-center">
+          <span className="text-xs text-slate-500">Updated regularly</span>
+          <a
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center"
+          >
+            Visit Site <ExternalLink size={14} className="ml-1" />
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// --------------------
+// Main Component
+// --------------------
 const Projects: React.FC = () => {
   return (
     <section id="projects" className="py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12">
-          <div className="max-w-2xl">
-            <h2 className="text-3xl font-extrabold text-slate-900 sm:text-4xl">
-              Project Showcase
-            </h2>
-            <p className="mt-4 text-lg text-slate-600">
-              Check out some of our recently delivered projects. We ensure clean code, responsive design, and functional excellence.
-            </p>
+        {/* Projects Section */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-extrabold text-slate-900 sm:text-4xl">
+            Project Showcase
+          </h2>
+          <p className="mt-4 text-lg text-slate-600 max-w-2xl">
+            Recently delivered projects with clean code, responsive design, and production-ready quality.
+          </p>
+
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <ShowcaseCard key={index} item={project} />
+            ))}
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div key={index} className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                  <a 
-                    href={project.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center px-4 py-2 bg-white rounded-full text-slate-900 font-medium text-sm hover:bg-slate-100"
-                  >
-                    View Live <ExternalLink size={14} className="ml-2" />
-                  </a>
-                </div>
-              </div>
-              
-              <div className="p-6">
-                <div className="flex flex-wrap gap-2 mb-3">
-                  {project.tags.map((tag, i) => (
-                    <span key={i} className="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs font-semibold rounded">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-slate-600 text-sm mb-4 line-clamp-2">
-                  {project.description}
-                </p>
-                <div className="pt-4 border-t border-slate-100 flex justify-between items-center">
-                  <span className="text-xs text-slate-500">Delivered on time</span>
-                  <a 
-                    href={project.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center"
-                  >
-                    Visit Site <ExternalLink size={14} className="ml-1" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
+        {/* Interview Preparation Section */}
+        <div className="mt-20">
+          <h2 className="text-3xl font-extrabold text-slate-900 sm:text-4xl">
+            Interview Preparation
+          </h2>
+          <p className="mt-4 text-lg text-slate-600 max-w-2xl">
+            Strengthen your coding interviews with handpicked DSA problems and optimal solutions.
+          </p>
+
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {interviewPrep.map((item, index) => (
+              <ShowcaseCard key={index} item={item} />
+            ))}
+          </div>
         </div>
-        
-        <div className="mt-12 text-center">
-          <a href="#contact" className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center justify-center gap-1">
+
+        <div className="mt-16 text-center">
+          <a
+            href="#contact"
+            className="text-indigo-600 font-medium hover:text-indigo-800 inline-flex items-center gap-1"
+          >
             Want to see more? Contact Us <ExternalLink size={16} />
           </a>
         </div>
