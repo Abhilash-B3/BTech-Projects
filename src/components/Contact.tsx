@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
             Get In Touch
           </h2>
           <p className="mt-4 text-lg text-slate-600">
-            Ready to start your project? Fill out the form or reach us directly.
+            Ready to start your project? reach us directly by whatsapp for instant response.
           </p>
         </div>
 
