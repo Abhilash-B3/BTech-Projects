@@ -1,5 +1,6 @@
 import React from 'react';
-import { DollarSign, ShieldCheck, BookOpen, Clock } from 'lucide-react';
+import { IndianRupee, ShieldCheck, BookOpen, Clock } from 'lucide-react';
+
 
 const WhyChooseUs: React.FC = () => {
   return (
@@ -20,7 +21,7 @@ const WhyChooseUs: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="bg-indigo-800/50 backdrop-blur-sm p-6 rounded-xl border border-indigo-700/50">
-            <DollarSign className="h-10 w-10 text-green-400 mb-4" />
+            <IndianRupee className="h-10 w-10 text-green-400 mb-4" />
             <h3 className="text-xl font-bold mb-2">Unbeatable Price</h3>
             <p className="text-indigo-200 text-sm">
               We offer the most affordable rates in the market, specifically tailored for student budgets.
