@@ -35,7 +35,6 @@ const Hero: React.FC = () => {
             <ArrowRight className="ml-2 -mr-1 h-5 w-5" />
           </a>
           <a 
-            href="#contact"
             className="inline-flex items-center justify-center px-8 py-3 border border-slate-200 text-base font-medium rounded-lg text-slate-700 bg-white hover:bg-slate-50 transition-all shadow-sm hover:shadow-md"
           >
             <BookOpen className="mr-2 -ml-1 h-5 w-5 text-indigo-500" />
