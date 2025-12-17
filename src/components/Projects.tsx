@@ -7,21 +7,21 @@ const projects: Project[] = [
     title: 'EduTech',
     description: 'A comprehensive learning management system for schools.',
     link: 'https://academix-zeta-ten.vercel.app/',
-    image: 'https://picsum.photos/seed/edutech/600/400',
+    image: 'https://www.aiu.edu/wp-content/uploads/2025/02/education-technology-trends-scaled-1.jpg',
     tags: ['React', 'Node.js', 'MongoDB']
   },
   {
     title: 'CareerFluence',
     description: 'Job readiness and career tracking platform for graduates.',
     link: 'https://careerfluence.vercel.app/',
-    image: 'https://picsum.photos/seed/career/600/400',
+    image: 'https://mantechpublications.com/wp-content/uploads/2024/11/1-7-1024x1024.jpg',
     tags: ['Next.js', 'Tailwind', 'Firebase']
   },
   {
     title: 'GarageNow',
     description: 'On-demand mechanic and vehicle service booking app.',
     link: 'https://garage-now.vercel.app/',
-    image: 'https://picsum.photos/seed/garage/600/400',
+    image: 'https://images.unsplash.com/photo-1727893119356-1702fe921cf9?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FyJTIwc2VydmljZXxlbnwwfHwwfHx8MA%3D%3D',
     tags: ['MERN Stack', 'Redux', 'Stripe']
   }
 ];
