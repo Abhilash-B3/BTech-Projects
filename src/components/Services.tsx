@@ -9,7 +9,7 @@ const services: Service[] = [
     description: 'Complete academic projects ready for submission.',
     features: [
       'Source Code',
-      'Full Documentation',
+      'Project Explanation',
       'Database Schema',
       'Viva Support',
       'Setup Guide'
