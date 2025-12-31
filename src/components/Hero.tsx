@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
 
         <h3 className="text-2xl tracking-tight font-bold text-slate-900 sm:text-3xl md:text-4xl lg:text-5xl">
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
-            We empower tech students to build high-quality projects
+            We empower students to build high-quality projects
             and excel in interviews
           </span>
         </h3>
