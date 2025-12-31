@@ -14,16 +14,16 @@ const Hero: React.FC = () => {
           Helping Students Ace Their Projects
         </div>
 
-        <h1 className="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-6xl lg:text-7xl mb-6">
+        <h1 className="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-6xl lg:text-7xl mb-3">
           <span className="block">Build Better. Learn Faster.</span>
         </h1>
-        <h3 className="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-6xl lg:text-7xl mb-6">
+
+        <h3 className="text-2xl tracking-tight font-bold text-slate-900 sm:text-3xl md:text-4xl lg:text-5xl">
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
-             We empower Tech students to build high-quality Projects 
-             and excel in interviews
+            We empower tech students to build high-quality projects
+            and excel in interviews
           </span>
         </h3>
-
 
         <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-slate-600 mb-10">
           Build academic projects, professional portfolios, and private apps with expert guidance. 
