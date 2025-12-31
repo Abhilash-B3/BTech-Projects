@@ -6,8 +6,7 @@ const services: Service[] = [
   {
     title: 'BTech Projects',
     price: '₹800 – 2000+',
-    description:
-      'We build all types of projects: Web Development, Full-Stack, Deep Learning, and Machine Learning',
+    description:'We build all types of projects: Web Development, Full-Stack, Deep Learning, and Machine Learning',
     features: [
       'Source Code',
       'Project Explanation',
@@ -21,7 +20,7 @@ const services: Service[] = [
   {
     title: 'Professional Portfolio',
     price: '₹199',
-    description: 'A clean, personal website to showcase your resume.',
+    description: 'A refined portfolio website that strengthens your personal brand and effectively showcases your resume and projects to recruiters.',
     features: [
       'Responsive Design',
       'Hosted on Vercel/Netlify',
@@ -34,7 +33,7 @@ const services: Service[] = [
   {
     title: 'Private Projects',
     price: 'Custom',
-    description: 'Tailored applications for your specific startup idea.',
+    description: 'End-to-end custom application development aligned with your goals, technology needs, and scalability plans.',
     features: [
       'Custom Tech Stack',
       'Scalable Architecture',
@@ -47,7 +46,7 @@ const services: Service[] = [
   {
     title: 'Interview Prep',
     price: 'Free',
-    description: 'Bonus resources for all our customers.',
+    description: 'Exclusive bonus resources for our customers, featuring skill-specific notes and curated DSA practice links for practical learning experience.',
     features: [
       'DSA Practice Links',
       'Top 50 Interview Q&A',
