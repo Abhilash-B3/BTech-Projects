@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
 
         <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-slate-600 mb-10">
           Build academic projects, professional portfolios, and private apps with expert guidance. 
-          Don't overpay—get real-world tech experience.
+          Don't overpay-get real-world tech experience.
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4">
