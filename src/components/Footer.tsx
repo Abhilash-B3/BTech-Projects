@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
             <div className="flex items-center gap-2 mb-4">
               <Code2 className="h-6 w-6 text-indigo-400" />
               <span className="font-bold text-xl text-white">
-                Zentrix<span className="text-indigo-400">Labs</span>
+                Mentrix<span className="text-indigo-400">Labs</span>
               </span>
             </div>
             <p className="text-sm text-slate-400">
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-slate-800 pt-8 text-center text-sm text-slate-500">
-          <p>&copy; {new Date().getFullYear()} Zentrix Labs. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Mentrix Labs. All rights reserved.</p>
         </div>
       </div>
     </footer>
