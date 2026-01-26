@@ -5,7 +5,7 @@ import { Service } from '../types';
 const services: Service[] = [
   {
     title: 'BTech Projects',
-    price: '₹800 – 3000+',
+    price: 'Custom Projects',
     description:'We build all types of projects: Web Development, Full-Stack, Deep Learning, and Machine Learning',
     features: [
       'Source Code',
